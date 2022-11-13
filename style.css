@@ -1,0 +1,109 @@
+* {
+	margin: 0px;
+	font-family: '';
+	src: url(font/Poppins-Black.ttf);
+}
+
+body {
+	height: 1000px;
+}
+
+#banner {
+	position: relative;
+	top: 50px;
+	background: url(./image/background.png);
+	animation: 350ms header-onload linear forwards;
+}
+
+#blur {
+	height: 410px;
+	width: 360px;
+	backdrop-filter: blur(10px);
+	display: flex;
+	justify-content: center;
+	place-items: center;
+}
+
+#message {
+	position: relative;
+	color: white;
+	text-transform: uppercase;
+	transition-duration: 350ms;
+	transition-property: opacity;
+	animation: 350ms p-onload linear forwards;
+	opacity: 0%;
+	font-size: 60px;
+	font-weight: 900
+}
+
+main {
+	margin-top: 350px;
+}
+
+
+main h1 {
+	font-size: 30px;
+	font-weight: 900;
+}
+
+main article div {
+	display: flex;
+	justify-content: center;
+}
+
+
+@keyframes p-onload {
+	0% {
+		opacity: 0%;
+		top: 50px;
+	}
+	100% {
+		opacity: 100%;
+		top: 0px;
+	}
+}
+
+footer {
+	margin-top: 350px;
+	background: black;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	place-items: center;
+}
+
+footer h1 {
+	color: white;
+	font-size: 30px;
+	font-weight: 900
+}
+
+footer p {
+	color: white;
+	text-transform: uppercase;
+	width: 50px;
+	margin-left: 10px
+}
+
+@keyframes header-onload {
+	0% {
+		opacity: 0%;
+		top: 10px;
+	}
+	100% {
+		opacity: 100%;
+		top: 0px;
+	}
+}
+
+.reveal {
+	position: relative;
+	transform: translateY(150px);
+	opacity: 0;
+	transition: all 1s ease;
+}
+
+.reveal.active {
+	transform: translateY(0px);
+	opacity: 1
+}
